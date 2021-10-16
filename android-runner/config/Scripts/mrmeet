@@ -1,0 +1,11 @@
+TOUCH|{'x':327,'y':920,'type':'downAndUp',}
+TOUCH|{'x':327,'y':920,'type':'downAndUp',}
+WAIT|{'seconds':3.0,}
+TOUCH|{'x':823,'y':316,'type':'downAndUp',}
+WAIT|{'seconds':1.0,}
+TOUCH|{'x':97,'y':424,'type':'downAndUp',}
+TYPE|{'message':'nkx-brtg-asw',}
+WAIT|{'seconds':1.0,}
+TOUCH|{'x':965,'y':148,'type':'downAndUp',}
+WAIT|{'seconds':3.0,}
+TOUCH|{'x':715,'y':1148,'type':'downAndUp',}

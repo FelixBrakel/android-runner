@@ -1,0 +1,28 @@
+{
+  "type": "native",
+  "devices": {
+    "pixel4a": {}
+  },
+  "repetitions": 10,
+  "duration": 600000,
+  "monkeyrunner_path": "/home/felix/tools/bin/monkeyrunner",
+  "systrace_path": "/home/felix/platform-tools/systrace/systrace.py",
+  "powerprofile_path": "android-runner/config/Scripts/power_profile.xml",
+  "apps": [
+    "us.zoom.videomeetings"
+  ],
+  "profilers": {
+    "batterystats": {
+      "cleanup": true 
+    }
+  },
+  "scripts": {
+    "after_launch": [
+      {
+        "type": "monkeyreplay",
+        "path": "Scripts/mrzoom"
+      }
+    ]
+  },
+  "time_between_run": 12000
+}
