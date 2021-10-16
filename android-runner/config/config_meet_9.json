@@ -9,7 +9,7 @@
   "systrace_path": "/home/felix/platform-tools/systrace/systrace.py",
   "powerprofile_path": "android-runner/config/Scripts/power_profile.xml",
   "apps": [
-    "us.zoom.videomeetings"
+    "com.google.android.apps.meetings"
   ],
   "profilers": {
     "batterystats": {
