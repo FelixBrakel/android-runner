@@ -5,8 +5,8 @@
   },
   "repetitions": 10,
   "duration": 600000,
-  "monkeyrunner_path": "/home/felix/tools/bin/monkeyrunner",
-  "systrace_path": "/home/felix/platform-tools/systrace/systrace.py",
+  "monkeyrunner_path": "/home/pi/monkeyrunner",
+  "systrace_path": "/home/pi/systrace/systrace.py",
   "powerprofile_path": "android-runner/config/Scripts/power_profile.xml",
   "apps": [
     "us.zoom.videomeetings"
