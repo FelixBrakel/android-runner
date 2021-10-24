@@ -1,28 +1,29 @@
 {
   "type": "native",
   "devices": {
-    "nexus5x": {}
+    "motog5": {}
   },
-  "repetitions": 10,
+  "repetitions": 5,
   "duration": 180000,
-  "monkeyrunner_path": "/usr/lib/android-sdk/tools/monkeyrunner",
-  "systrace_path": "/usr/lib/android-sdk/platform-tools/systrace/systrace.py",
-  "powerprofile_path": "android-runner/config/Scripts/power_profile.xml",
+  "monkeyrunner_path": "/opt/android-sdk/tools/bin/monkeyrunner",
+  "systrace_path": "/opt/android-sdk/platform-tools/systrace/systrace.py",
+  "powerprofile_path": "/home/felix/android-runner/android-runner/config/Scripts/power_profile_pixel.xml",
   "apps": [
     "us.zoom.videomeetings"
   ],
   "profilers": {
     "batterystats": {
-      "cleanup": true 
+      "cleanup": false,
+      "enable_systrace_parsing": false
     }
   },
   "scripts": {
-    "before_run": [
+    "after_launch": [
       {
         "type": "monkeyreplay",
-        "path": "Scripts/mrzoom.txt"
+        "path": "Scripts/mrzoom_moto.txt"
       }
     ]
   },
-  "time_between_run": 12000
+  "time_between_run": 10000
 }

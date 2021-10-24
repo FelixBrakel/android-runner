@@ -1,28 +1,29 @@
 {
   "type": "native",
   "devices": {
-    "pixel4a": {}
+    "motog5": {}
   },
-  "repetitions": 10,
+  "repetitions": 5,
   "duration": 300000,
-  "monkeyrunner_path": "/home/felix/tools/bin/monkeyrunner",
-  "systrace_path": "/home/felix/platform-tools/systrace/systrace.py",
-  "powerprofile_path": "android-runner/config/Scripts/power_profile.xml",
+  "monkeyrunner_path": "/opt/android-sdk/tools/bin/monkeyrunner",
+  "systrace_path": "/opt/android-sdk/platform-tools/systrace/systrace.py",
+  "powerprofile_path": "/home/felix/android-runner/android-runner/config/Scripts/power_profile_pixel.xml",
   "apps": [
     "com.google.android.apps.meetings"
   ],
   "profilers": {
     "batterystats": {
-      "cleanup": true 
+      "cleanup": false,
+      "enable_systrace_parsing": false
     }
   },
   "scripts": {
     "after_launch": [
       {
         "type": "monkeyreplay",
-        "path": "Scripts/mrmeet"
+        "path": "Scripts/mrmeet_moto.txt"
       }
     ]
   },
-  "time_between_run": 12000
+  "time_between_run": 10000
 }
