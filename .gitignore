@@ -113,3 +113,4 @@ AndroidRunner/Plugins/monsoon/script/monsoon_config.csv
 output/
 
 .DS_Store
+.Rproj.user
