@@ -3,7 +3,7 @@ import json
 import csv
 
 # Configuration
-phone = "motog5"
+phone = "pixel3"
 raw_data_path = "/Volumes/Seagate HDD/VU/Green Lab/data-pre"
 
 # The results will be pushed here before writing them into a csv file at the end

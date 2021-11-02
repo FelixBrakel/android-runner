@@ -3,7 +3,7 @@ install.packages("dplyr")
 library(ggplot2)
 library(dplyr)
 
-data_path <- "/Users/leonhard/supergreenlab/results-pre.csv"
+data_path <- "results-pre.csv"
 
 energy_data <- read.csv(data_path) %>%
   mutate(joules_per_minute = joules / duration_in_minutes)
