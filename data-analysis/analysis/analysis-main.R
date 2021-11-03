@@ -44,7 +44,7 @@ summary(zoom_data$joules)
 
 # Relative changes when changing one factor
 print_mean_increase <- function(base_set, actual_set) {
-  sprintf("%.f%%", 100 * ((mean(actual_set$joules)/mean(base_set$joules))-1))
+  sprintf("%.1f%%", 100 * ((mean(actual_set$joules)/mean(base_set$joules))-1))
 }
 
 # Meet: Relative changes
@@ -172,4 +172,7 @@ ggplot(data = meet_camoff, aes(x = as.factor(number_of_participants), y = joules
   ylab("Energy consumption [J]") +
   labs(fill = "App") +
   geom_boxplot()
+
+
+barplot(energy_data$joules)
 
