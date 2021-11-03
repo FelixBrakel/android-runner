@@ -1,16 +1,13 @@
 install.packages("ggplot2")
 install.packages("dplyr")
-install.packages("gridExtra")
 library(ggplot2)
 library(dplyr)
-library(gridExtra)
 
 # Loading data
 energy_data <- read.csv("results-main.csv") %>%
   mutate(camera = ifelse(camera, "on", "off")) %>%
   mutate(microphone = ifelse(microphone, "on", "off")) %>%
   mutate(background = ifelse(background, "on", "off"))
-energy_data_camera_on <- filter(energy_data, camera == "on")
 meet_data <- energy_data %>% filter(app == "Meet")
 zoom_data <- energy_data %>% filter(app == "Zoom")
 
