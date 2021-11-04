@@ -1,0 +1,32 @@
+<experiment>
+  <configHash>2cabd6e69332a39e5df6832ab5769685</configHash>
+  <outputDir>/home/greenlab/android-runner/android-runner/config/output/2021.11.01_173339/</outputDir>
+  <runsToRun/>
+  <runsDone>
+    <run runId="0">
+      <device>pixel3</device>
+      <path>us.zoom.videomeetings</path>
+      <runCount>1</runCount>
+    </run>
+    <run runId="1">
+      <device>pixel3</device>
+      <path>us.zoom.videomeetings</path>
+      <runCount>2</runCount>
+    </run>
+    <run runId="2">
+      <device>pixel3</device>
+      <path>us.zoom.videomeetings</path>
+      <runCount>3</runCount>
+    </run>
+    <run runId="3">
+      <device>pixel3</device>
+      <path>us.zoom.videomeetings</path>
+      <runCount>4</runCount>
+    </run>
+    <run runId="4">
+      <device>pixel3</device>
+      <path>us.zoom.videomeetings</path>
+      <runCount>5</runCount>
+    </run>
+  </runsDone>
+</experiment>

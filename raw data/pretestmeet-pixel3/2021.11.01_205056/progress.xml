@@ -1,0 +1,32 @@
+<experiment>
+  <configHash>5c12271578fe7fa522590974115908be</configHash>
+  <outputDir>/home/greenlab/android-runner/android-runner/config/output/2021.11.01_205056/</outputDir>
+  <runsToRun/>
+  <runsDone>
+    <run runId="0">
+      <device>pixel3</device>
+      <path>com.google.android.apps.meetings</path>
+      <runCount>1</runCount>
+    </run>
+    <run runId="1">
+      <device>pixel3</device>
+      <path>com.google.android.apps.meetings</path>
+      <runCount>2</runCount>
+    </run>
+    <run runId="2">
+      <device>pixel3</device>
+      <path>com.google.android.apps.meetings</path>
+      <runCount>3</runCount>
+    </run>
+    <run runId="3">
+      <device>pixel3</device>
+      <path>com.google.android.apps.meetings</path>
+      <runCount>4</runCount>
+    </run>
+    <run runId="4">
+      <device>pixel3</device>
+      <path>com.google.android.apps.meetings</path>
+      <runCount>5</runCount>
+    </run>
+  </runsDone>
+</experiment>
