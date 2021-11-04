@@ -1,9 +1,0 @@
-{"type": "touch", "y":1920, "down": 0, "up": 10,"x":0}
-{"type": "touch", "y":504, "down": 2500, "up": 2550,"x":411}
-{"type": "touch", "y":348, "down": 2800, "up": 2850,"x":1002}
-{"type": "touch", "y":872, "down": 3100, "up": 3150,"x":523}
-{"type": "touch", "y":896, "down": 3400, "up": 3450,"x":506}
-{"type": "touch", "y":852, "down": 7200, "up": 7250,"x":550}
-{"type": "touch", "y":1084, "down": 7500, "up": 7550,"x":57}
-{"type": "touch", "y":708, "down": 8000, "up": 8050,"x":830}
-{"type": "touch", "y":1400, "down": 9500, "up": 9550,"x":425}

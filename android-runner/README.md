@@ -51,10 +51,10 @@ A JSON config that maps devices names to their adb ids for easy reference in con
 Below is a reference to the fields for the experiment configuration. It is not always updated.
 
 **adb_path** *string*
-Path to adb.  Normally don't need to include.  Example path: `/opt/platform-tools/adb`
+Path to adb.  Normally don't need to include.  Example path: `/home/platform-tools/adb`
 
 **monkeyrunner_path** *string*
-Path to Monkeyrunner. Example path: `/opt/platform-tools/bin/monkeyrunner`
+Path to Monkeyrunner. Example path: `/home/platform-tools/bin/monkeyrunner`
 
 **type** *string*
 Type of the experiment. Can be `web`, `native` or `plugintest`

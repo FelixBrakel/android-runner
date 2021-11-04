@@ -21,9 +21,9 @@
     "after_launch": [
       {
         "type": "monkeyreplay",
-        "path": "Scripts/zoom3.txt"
+        "path": "Scripts/zoom4.txt"
       }
     ]
   },
-  "time_between_run": 60000
+  "time_between_run": 10000
 }

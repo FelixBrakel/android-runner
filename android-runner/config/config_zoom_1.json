@@ -21,7 +21,7 @@
     "after_launch": [
       {
         "type": "monkeyreplay",
-        "path": "Scripts/zoom3.txt"
+        "path": "Scripts/zoom1.txt"
       }
     ]
   },

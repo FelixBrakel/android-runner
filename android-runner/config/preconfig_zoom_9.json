@@ -3,8 +3,8 @@
   "devices": {
     "pixel3": {}
   },
-  "repetitions": 20,
-  "duration": 180000,
+  "repetitions": 5,
+  "duration": 540000,
   "monkeyrunner_path": "/home/greenlab/Android/Sdk/tools/bin/monkeyrunner",
   "systrace_path": "/home/greenlab/Android/Sdk/platform-tools/systrace/systrace.py",
   "powerprofile_path": "/home/greenlab/android-runner/android-runner/config/Scripts/power_profile_pixel3.xml",
@@ -21,7 +21,7 @@
     "after_launch": [
       {
         "type": "monkeyreplay",
-        "path": "Scripts/zoom3.txt"
+        "path": "Scripts/zoom1.txt"
       }
     ]
   },

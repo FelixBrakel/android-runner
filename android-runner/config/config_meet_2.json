@@ -9,7 +9,7 @@
   "systrace_path": "/home/greenlab/Android/Sdk/platform-tools/systrace/systrace.py",
   "powerprofile_path": "/home/greenlab/android-runner/android-runner/config/Scripts/power_profile_pixel3.xml",
   "apps": [
-    "us.zoom.videomeetings"
+    "com.google.android.apps.meetings"
   ],
   "profilers": {
     "batterystats": {
@@ -21,7 +21,7 @@
     "after_launch": [
       {
         "type": "monkeyreplay",
-        "path": "Scripts/zoom3.txt"
+        "path": "Scripts/meet2.txt"
       }
     ]
   },
