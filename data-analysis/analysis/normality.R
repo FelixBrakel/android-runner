@@ -12,9 +12,9 @@ data$camera = as.factor(data$camera)
 data$microphone = as.factor(data$microphone)
 data$background = as.factor(data$background)
 
-check_normality <- function(dataset_to_eval, plot_title="") {
-  plot(density(dataset_to_eval$joules), main=plot_title)
-  qqPlot(dataset_to_eval$joules)
+check_normality <- function(dataset_to_eval, plot_title) {
+  plot(density(dataset_to_eval$joules), main=plot_title, ylab="Density", xlab="Energy consumption [J]")
+  qqPlot(dataset_to_eval$joules, xlab="Normal quantiles", ylab="Sample quantiles")
   print(shapiro.test(dataset_to_eval$joules)) # need to print explicitly in a loop
 }
 
@@ -29,6 +29,27 @@ plot4 <- ggplot(data, aes(x=background, y=joules, fill=app)) + geom_violin(trim=
 
 
 grid.arrange(plot1, plot2, plot3, plot4, nrow=2, ncol=2)
+
+#--------------------------
+
+
+datazoom <- data %>%
+  filter(app == "Zoom") 
+
+datameet <- data %>%
+  filter(app == "Meet") 
+
+par(mfrow=c(4,1))
+
+check_normality(datazoom, "Zoom")
+
+check_normality(datameet, "Meet")
+
+
+#--------------------------
+
+
+
 
 datazoomcam <- data %>%
   filter(app == "Zoom") %>%
@@ -94,6 +115,17 @@ datameetnoback <- data %>%
   filter(app == "Meet") %>%
   filter(background == "False")
 
+
+par(mfrow=c(1,2))
+check_normality(datazoomback, "Zoom with virtual background")
+
+check_normality <- function(dataset_to_eval, plot_title="") {
+  plot(density(dataset_to_eval$joules),main="",xlab="",ylab="",axes=FALSE)
+  qqPlot(dataset_to_eval$joules,xlab="",ylab="")
+  print(shapiro.test(dataset_to_eval$joules)) # need to print explicitly in a loop
+}
+par(mfrow=c(8,4),ann=FALSE, mar = c(1,2,1,1))
+
 check_normality(datazoomcam, "zoom cam")
 check_normality(datazoomcamoff, "zoom no cam")
 check_normality(datameetcam, "meet cam")
@@ -115,38 +147,38 @@ check_normality(datameetback, "meet back")
 check_normality(datameetnoback, "meet no back")
 
 #---------------------------------------
-datacam <- data %>%
-  filter(camera == "True")
+#datacam <- data %>%
+#  filter(camera == "True")
 
-datacamoff <- data %>%
-  filter(camera == "False")
+#datacamoff <- data %>%
+#  filter(camera == "False")
 
-datamic <- data %>%
-  filter(microphone == "True")
+#datamic <- data %>%
+#  filter(microphone == "True")
 
-datamicoff <- data %>%
-  filter(microphone == "False")
+#datamicoff <- data %>%
+#  filter(microphone == "False")
 
-data2 <- data %>%
-  filter(number_of_participants == "2")
+#data2 <- data %>%
+#  filter(number_of_participants == "2")
 
-data5 <- data %>%
-  filter(number_of_participants == "5")
+#data5 <- data %>%
+#  filter(number_of_participants == "5")
 
-databack <- data %>%
-  filter(background == "True")
+#databack <- data %>%
+#  filter(background == "True")
 
-datanoback <- data %>%
-  filter(background == "False")
+#datanoback <- data %>%
+#  filter(background == "False")
 
-check_normality(datacam, "cam")
-check_normality(datacamoff, "no cam")
+#check_normality(datacam, "cam")
+#check_normality(datacamoff, "no cam")
 
-check_normality(datamic, "mic")
-check_normality(datamicoff, "no mic")
+#check_normality(datamic, "mic")
+#check_normality(datamicoff, "no mic")
 
-check_normality(data2, "2")
-check_normality(data5, "5")
+#check_normality(data2, "2")
+#check_normality(data5, "5")
 
-check_normality(databack, "back")
-check_normality(datanoback, "no back")
+#check_normality(databack, "back")
+#check_normality(datanoback, "no back")
