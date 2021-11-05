@@ -2,8 +2,6 @@
 In this project we, the Super Green Lab team, want to do research on the energy consumption of the two popular Android videoconferencing apps Zoom and Google Meet. This repository is devided into two main parts: the actual experiment (`android-runner`) and the analysis of the measured data (`data-analysis`).
 
 ## android-runner
-**TODO**
-
 Python framework for automatically executing measurement-based experiments on native and web apps running on Android devices
 
 ## Data analysis
@@ -19,10 +17,32 @@ There are two preprocessing scripts available: one for the preliminary experimen
 | ----------- | ----------- | ----|
 | `app` | The examined videoconferencing app |`meet` or `zoom` |
 | `number_of_participants` (only in main)|Number of participants in the video conference|`2` or `5`|
-| `camera` (only in main)|Activation state of the camera|`off` or `on`|
-| `microphone` (only in main)|Activation state of the microphone|`off` or `on`|
-| `duration_in_minutes`| Duration of the video conference in minutes|Numerical value|
+| `camera` (only in main)|Activation state of the camera|`True` or `False`|
+| `microphone` (only in main)|Activation state of the microphone|`True` or `False`|
+| `background` (only in main)|Activation state of the virtual background|`True` or `False`|
+| `duration_in_minutes` (only in preliminary)| Duration of the video conference in minutes|Numerical value|
 | `joules`|Consumed energy in Joules|Numerical value|
+
+#### Folder structure
+Inside the specified `raw_data_path` folder must be the following folder structure for the preprocessing script to find the measurements and used treatments.
+##### Preliminary experiment:
+- Folders with arbitrary names, all containing:
+    - Config file: `config.json`
+    - Folder: `data`
+        - Folder: Name of the phone (as specified in the variable `phone`)
+            - Folder: Either `com-google-android-apps-meetings` or `us-zoom-videomeetings`
+                - Folder: `batterystats`
+                    - CSV files starting with `Joule` containing the energy measurements
+
+##### Main experiment:
+- Folders with arbitrary names ending with either `-2p` (for two participants) or `-5p` (for five participants), all containing:
+    - Folders with arbitrary names ending with a hypen (`-`) followed by a subset of the letters `c` (iff the camera was active), `b` (iff the virtual background was active) and `m` (iff the microphone was active) – for example: `somefoldername-cbm`
+        - Config file: `config.json`
+        - Folder: `data`
+            - Folder: Name of the phone (as specified in the variable `phone`)
+                - Folder: Either `com-google-android-apps-meetings` or `us-zoom-videomeetings`
+                    - Folder: `batterystats`
+                        - CSV files starting with `Joule` containing the energy measurements
 
 ### Acutal analysis
 To analyse and visualize the preprocessed data, we used R. With R it is very simple to read CSV files and perform analyses on the read data. For creating plots, we used ggplot2.
