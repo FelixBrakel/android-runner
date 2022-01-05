@@ -120,31 +120,31 @@ par(mfrow=c(1,2))
 check_normality(datazoomback, "Zoom with virtual background")
 
 check_normality <- function(dataset_to_eval, plot_title="") {
-  plot(density(dataset_to_eval$joules),main="",xlab="",ylab="",axes=FALSE)
+  plot(density(dataset_to_eval$joules),main=plot_title,xlab="",ylab="",axes=FALSE)
   qqPlot(dataset_to_eval$joules,xlab="",ylab="")
   print(shapiro.test(dataset_to_eval$joules)) # need to print explicitly in a loop
 }
-par(mfrow=c(8,4),ann=FALSE, mar = c(1,2,1,1))
+par(mfrow=c(8,4), ann=TRUE, mar = c(1,2,1,1))
 
-check_normality(datazoomcam, "zoom cam")
-check_normality(datazoomcamoff, "zoom no cam")
-check_normality(datameetcam, "meet cam")
-check_normality(datameetcamoff, "meet no cam")
+check_normality(datazoomcam, "Zoom camera on")
+check_normality(datazoomcamoff, "Zoom camera off")
+check_normality(datameetcam, "Meet camera on")
+check_normality(datameetcamoff, "Meet camera off")
 
-check_normality(datazoommic, "zoom mic")
-check_normality(datazoommicoff, "zoom no mic")
-check_normality(datameetmic, "meet mic")
-check_normality(datameetmicoff, "meet no mic")
+check_normality(datazoommic, "Zoom microphone on")
+check_normality(datazoommicoff, "Zoom microphone off")
+check_normality(datameetmic, "Meet microphone on")
+check_normality(datameetmicoff, "Meet microphone off")
 
-check_normality(datazoom2, "zoom 2")
-check_normality(datazoom5, "zoom 5")
-check_normality(datameet2, "meet 2")
-check_normality(datameet5, "meet 5")
+check_normality(datazoom2, "Zoom 2 participants")
+check_normality(datazoom5, "Zoom 5 participants")
+check_normality(datameet2, "Meet 2 participants")
+check_normality(datameet5, "Meet 5 participants")
 
-check_normality(datazoomback, "zoom back")
-check_normality(datazoomnoback, "zoom no back")
-check_normality(datameetback, "meet back")
-check_normality(datameetnoback, "meet no back")
+check_normality(datazoomback, "Zoom background on")
+check_normality(datazoomnoback, "Zoom background off")
+check_normality(datameetback, "Meet background on")
+check_normality(datameetnoback, "Meet background off")
 
 #---------------------------------------
 #datacam <- data %>%
