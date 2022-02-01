@@ -1,5 +1,9 @@
-# Energy consumption of videoconferencing apps
-In this project we, the Super Green Lab team, want to do research on the energy consumption of the two popular Android videoconferencing apps Zoom and Google Meet. This repository is devided into two main parts: the actual experiment (`android-runner`) and the analysis of the measured data (`data-analysis`).
+# Do You Have the Energy for This Meeting? An Empirical Study on the Energy Consumption of Android Videoconferencing Apps
+This repository is a companion page of the paper _"Do You Have the Energy for This Meeting? An Empirical Study on the Energy Consumption of Android Videoconferencing Apps"_, submitted for review at the 9th IEEE/ACM International Conference on Mobile Software Engineering and Systems (MOBILESoft), 2022.
+
+The study aims to investigate the energy consumption of two popular Android videoconferencing apps, namely Zoom and Google Meet. 
+
+This repository is devided into two main parts: the actual experiment (`android-runner`) and the analysis of the measured data (`data-analysis`).
 
 ## android-runner
 Python framework for automatically executing measurement-based experiments on native and web apps running on Android devices
